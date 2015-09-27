@@ -10,25 +10,25 @@ library(data.table)
 library(stringr)
 
 # Get features
-setwd("~/Documents/JohnsHopkinsCoursera/getdata-007/CourseProject/UCI HAR Dataset")
+setwd("~/Documents/JohnsHopkinsCoursera/getdata-007/CourseProject/Getdata032CourseProject/UCI HAR Dataset")
 features <- read.table("features.txt", header = FALSE, sep = "", blank.lines.skip = TRUE) 
 
 # Get training data 
-setwd("~/Documents/JohnsHopkinsCoursera/getdata-007/CourseProject/UCI HAR Dataset/train")
+setwd("~/Documents/JohnsHopkinsCoursera/getdata-007/CourseProject/Getdata032CourseProject/UCI HAR Dataset/train")
 trainingSubjects <- read.table("subject_train.txt", sep = "", blank.lines.skip = TRUE)
 trainingLabel <- read.table("y_train.txt", sep = "", blank.lines.skip = TRUE)
 trainingSet <- read.table("X_train.txt", sep = "", blank.lines.skip = TRUE)
 training <- cbind(trainingSubjects, trainingLabel, trainingSet)
 
 # Get test data  
-setwd("~/Documents/JohnsHopkinsCoursera/getdata-007/CourseProject/UCI HAR Dataset/test")
+setwd("~/Documents/JohnsHopkinsCoursera/getdata-007/CourseProject/Getdata032CourseProject/UCI HAR Dataset/test")
 testSubjects <- read.table("subject_test.txt", sep = "", blank.lines.skip = TRUE)
 testLabel <- read.table("y_test.txt", sep = "", blank.lines.skip = TRUE)
 testSet <- read.table("X_test.txt", sep = "", blank.lines.skip = TRUE)
 test <- cbind(testSubjects, testLabel, testSet)
 
 # Combine training and test data
-setwd("~/Documents/JohnsHopkinsCoursera/getdata-007/CourseProject")
+setwd("~/Documents/JohnsHopkinsCoursera/getdata-007/CourseProject/Getdata032CourseProject")
 mergedData <- rbind(training, test)
  
 #Rename columns with appropriate labels
