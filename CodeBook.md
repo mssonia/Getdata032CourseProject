@@ -99,3 +99,28 @@ fBodyAccJerk.std.X - The standard deviation calculated on the body linear accele
 fBodyAccJerk.std.Y - The standard deviation calculated on the body linear acceleration which applied the Fast Fourier Transform (FFT) to time domain signal on the Y axis.
 
 fBodyAccJerk.std.Z - The standard deviation calculated on the body linear acceleration which applied the Fast Fourier Transform (FFT) to time domain signal on the Z axis.
+
+# Variables
+
+features - Stores value of each features read from features.txt file.  
+
+mergedData - Stores data resulting from binding the rows of data stored in the test and train variables.  Further procesing the mergedData yields data resulting from extracting onl the columns storing means and standard deviation data.
+
+testSubjects - Stores data read from the subject_test.txt file.
+
+testLabel - Stores data read from the y_test.txt file.
+
+testSet - Stores data read from the X_test.txt file.
+
+test - Stores data resulting from binding the columns of the data stored in the testSubjects, testLabel, and testSet variables.
+
+tidyDataSet - Stores data resulting from grouping by Subject and Activity and storing the mean of each groups data by column.
+
+trainSubjects - Stores data read from the subject_train.txt file.
+
+trainLabel - Stores data read from the y_train.txt file.
+
+trainSet - Stores data read from the X_train.txt file.
+
+train - Stored data resulting from binding the columns of the data stored in the trainSubjects, trainLabel, and trainSet variables.
+
